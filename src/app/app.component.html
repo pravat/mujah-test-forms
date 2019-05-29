@@ -1,0 +1,14 @@
+<form class="container" [formGroup]="mainGroup">
+	<div class="row">
+			<app-organization-details class="col-md" formControlName="organizationDetails"> </app-organization-details>
+		<!-- <div class="col-md">
+			<app-organization-addresses formControlName="organizationAddresses"> </app-organization-addresses>
+		</div> -->
+	</div>
+</form>
+<button class="btn btn-primary" (click)="fillForm()">Fill</button>
+<pre>
+Errors: {{formService.getAllErrors(mainGroup) | json}} 
+Details:
+{{mainGroup.value | json}}
+</pre>

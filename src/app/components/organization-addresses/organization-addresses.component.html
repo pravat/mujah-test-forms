@@ -1,0 +1,8 @@
+<form [formGroup]="addressesGroup">
+  <div formArrayName="addresses">
+    <app-organization-address *ngFor="let address of addressesArr.controls; let i=index" [formControlName]="i">
+      <input class="btn btn-danger" type="button" (click)="deleteAddress(i)" value="Remove"/>
+    </app-organization-address>
+  </div>
+  <input class="btn btn-primary" type="button" (click)="newAddress()" value="New Address"/>  
+</form>
